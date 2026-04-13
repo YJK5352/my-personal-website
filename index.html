@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>余建科 - 个人网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">余建科</div>
+                <div class="navbar-links">
+                    <a href="#home">首页</a>
+                    <a href="#about">关于我</a>
+                    <a href="#projects">作品</a>
+                    <a href="#contact">联系我</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 首页 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>你好，我是余建科</h1>
+            <p class="intro">我是一名热爱技术的开发者，专注于前端和后端开发。我喜欢创造美观、实用的网站和应用程序。</p>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <p>我是一名充满热情的开发者，目前居住在香港。我喜欢用AI开发软件，探索人工智能在各个领域的应用。</p>
+                <p>我擅长 HTML、CSS、JavaScript 等前端技术，同时也熟悉后端开发。我喜欢不断学习新技术，挑战自己，创造出优秀的作品。</p>
+                <p>目前我正在从零学习Trae，希望能够利用这个强大的工具来提升我的开发效率和代码质量。</p>
+                <div class="about-skills">
+                    <h3>我的技能</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">HTML/CSS</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">AI开发</div>
+                        <div class="skill-item">Trae</div>
+                        <div class="skill-item">前端框架</div>
+                        <div class="skill-item">后端开发</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品区 -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>我的作品</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>我的第一个AI个人网站</h3>
+                    <p>这是我开发的第一个AI个人网站，使用了HTML、CSS和JavaScript，支持响应式设计和深色/浅色模式切换。</p>
+                    <button class="btn">查看详情</button>
+                </div>
+                <div class="project-card">
+                    <h3>待办事项小工具</h3>
+                    <p>一个简单易用的待办事项管理工具，支持添加、编辑、删除任务，以及任务状态管理。</p>
+                    <button class="btn">查看详情</button>
+                </div>
+                <div class="project-card">
+                    <h3>AI聊天助手演示</h3>
+                    <p>一个基于AI的聊天助手演示，能够回答用户的问题，提供信息和建议。</p>
+                    <button class="btn">查看详情</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>联系我</h2>
+            <p>如果你对我的作品感兴趣，或者有任何问题，欢迎随时联系我。</p>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">提交</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 余建科. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
