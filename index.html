@@ -1,115 +1,150 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>余建科 - 个人网站</title>
+    <meta name="description" content="余建科的个人网站 - 专注于 AI 开发和全栈技术。">
+    <title>余建科 | 现代 AI 开发者</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <p class="loader-text">加载中...</p>
+        </div>
+    </div>
     <header>
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">余建科</div>
-                <div class="navbar-links">
+                <div class="navbar-links" id="navLinks">
                     <a href="#home">首页</a>
                     <a href="#about">关于我</a>
                     <a href="#projects">作品</a>
                     <a href="#contact">联系我</a>
                 </div>
-                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="navbar-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">🌙</button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+                </div>
             </div>
         </nav>
     </header>
-
-    <!-- 首页 -->
     <section id="home" class="hero">
+        <div class="hero-bg-orb orb1"></div>
+        <div class="hero-bg-orb orb2"></div>
         <div class="container">
-            <h1>你好，我是余建科</h1>
-            <p class="intro">我是一名热爱技术的开发者，专注于前端和后端开发。我喜欢创造美观、实用的网站和应用程序。</p>
+            <div class="hero-content">
+                <div class="avatar-wrapper reveal">
+                    <div class="avatar-ring"></div>
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=yujiank" alt="余建科的头像" class="avatar">
+                </div>
+                <div class="hero-badge reveal delay-1">👋 欢迎来到我的主页</div>
+                <h1 class="hero-title reveal delay-2">你好，我是 <span class="gradient-text">余建科</span></h1>
+                <p class="hero-subtitle reveal delay-3">热爱技术的开发者，专注于 AI 开发和全栈技术。<br>用代码创造美观、实用的作品。</p>
+                <div class="hero-cta reveal delay-4">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> 查看作品</a>
+                    <a href="#" class="btn btn-outline" id="downloadResume"><i class="fas fa-download"></i> 下载简历</a>
+                </div>
+            </div>
         </div>
+        <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
     </section>
-
-    <!-- 关于我 -->
     <section id="about" class="section">
         <div class="container">
-            <h2>关于我</h2>
+            <div class="section-header reveal"><h2>关于我</h2><div class="section-line"></div></div>
             <div class="about-content">
-                <p>我是一名充满热情的开发者，目前居住在香港。我喜欢用AI开发软件，探索人工智能在各个领域的应用。</p>
-                <p>我擅长 HTML、CSS、JavaScript 等前端技术，同时也熟悉后端开发。我喜欢不断学习新技术，挑战自己，创造出优秀的作品。</p>
-                <p>目前我正在从零学习Trae，希望能够利用这个强大的工具来提升我的开发效率和代码质量。</p>
-                <div class="about-skills">
+                <p class="reveal">我是一名充满热情的开发者，目前居住在香港。我喜欢用 AI 开发软件，探索人工智能在各个领域的应用。</p>
+                <p class="reveal delay-1">我擅长 HTML、CSS、JavaScript 等前端技术，同时也熟悉后端开发。我喜欢不断学习新技术，挑战自己，创造出优秀的作品。</p>
+                <p class="reveal delay-2">目前我正在深入学习 Trae，希望能够利用这个强大的工具来提升我的开发效率和代码质量。</p>
+                <div class="about-skills reveal delay-3">
                     <h3>我的技能</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">HTML/CSS</div>
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">AI开发</div>
-                        <div class="skill-item">Trae</div>
-                        <div class="skill-item">前端框架</div>
-                        <div class="skill-item">后端开发</div>
+                        <div class="skill-card"><div class="skill-icon-wrap" style="background:rgba(227,79,38,0.12)"><i class="fab fa-html5" style="color:#e34f26"></i></div><span>HTML / CSS</span></div>
+                        <div class="skill-card"><div class="skill-icon-wrap" style="background:rgba(247,223,30,0.12)"><i class="fab fa-js" style="color:#f7df1e"></i></div><span>JavaScript</span></div>
+                        <div class="skill-card"><div class="skill-icon-wrap" style="background:rgba(16,163,127,0.12)"><i class="fas fa-robot" style="color:#10a37f"></i></div><span>AI 开发</span></div>
+                        <div class="skill-card"><div class="skill-icon-wrap" style="background:rgba(99,102,241,0.12)"><i class="fas fa-code" style="color:#6366f1"></i></div><span>Trae</span></div>
+                        <div class="skill-card"><div class="skill-icon-wrap" style="background:rgba(97,218,251,0.12)"><i class="fab fa-react" style="color:#61dafb"></i></div><span>前端框架</span></div>
+                        <div class="skill-card"><div class="skill-icon-wrap" style="background:rgba(68,68,68,0.12)"><i class="fas fa-server" style="color:#888"></i></div><span>后端开发</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- 作品区 -->
-    <section id="projects" class="section">
+    <section id="projects" class="section section-alt">
         <div class="container">
-            <h2>我的作品</h2>
+            <div class="section-header reveal"><h2>我的作品</h2><div class="section-line"></div></div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>我的第一个AI个人网站</h3>
-                    <p>这是我开发的第一个AI个人网站，使用了HTML、CSS和JavaScript，支持响应式设计和深色/浅色模式切换。</p>
-                    <button class="btn">查看详情</button>
+                <div class="project-card reveal" data-project="1">
+                    <div class="project-image"><img src="https://via.placeholder.com/400x250/6366f1/ffffff?text=个人网站" alt="作品1"><div class="project-overlay"><button class="btn btn-primary open-modal"><i class="fas fa-eye"></i> 查看详情</button></div></div>
+                    <div class="project-info"><div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div><h3>我的第一个AI个人网站</h3><p>使用 HTML、CSS 和 JS 开发，支持响应式和深色模式切换。</p></div>
                 </div>
-                <div class="project-card">
-                    <h3>待办事项小工具</h3>
-                    <p>一个简单易用的待办事项管理工具，支持添加、编辑、删除任务，以及任务状态管理。</p>
-                    <button class="btn">查看详情</button>
+                <div class="project-card reveal delay-1" data-project="2">
+                    <div class="project-image"><img src="https://via.placeholder.com/400x250/10a37f/ffffff?text=待办工具" alt="作品2"><div class="project-overlay"><button class="btn btn-primary open-modal"><i class="fas fa-eye"></i> 查看详情</button></div></div>
+                    <div class="project-info"><div class="project-tags"><span class="tag">JavaScript</span><span class="tag">LocalStorage</span></div><h3>待办事项小工具</h3><p>简单高效的任务管理工具，支持本地存储，让你不再忘记重要事项。</p></div>
                 </div>
-                <div class="project-card">
-                    <h3>AI聊天助手演示</h3>
-                    <p>一个基于AI的聊天助手演示，能够回答用户的问题，提供信息和建议。</p>
-                    <button class="btn">查看详情</button>
+                <div class="project-card reveal delay-2" data-project="3">
+                    <div class="project-image"><img src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=AI聊天" alt="作品3"><div class="project-overlay"><button class="btn btn-primary open-modal"><i class="fas fa-eye"></i> 查看详情</button></div></div>
+                    <div class="project-info"><div class="project-tags"><span class="tag">AI</span><span class="tag">动画</span></div><h3>AI聊天助手演示</h3><p>基于最新 AI 模型的聊天界面演示，提供流畅的交互体验。</p></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- 联系我 -->
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="关闭">&times;</button>
+            <div class="modal-image-wrap"><img id="modalImage" src="" alt="项目图片"></div>
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <div class="modal-tech" id="modalTech"></div>
+                <a id="modalLink" href="#" class="btn btn-primary modal-cta"><i class="fas fa-external-link-alt"></i> 查看更多</a>
+            </div>
+        </div>
+    </div>
     <section id="contact" class="section">
         <div class="container">
-            <h2>联系我</h2>
-            <p>如果你对我的作品感兴趣，或者有任何问题，欢迎随时联系我。</p>
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">姓名</label>
-                        <input type="text" id="name" name="name" required>
+            <div class="section-header reveal"><h2>保持联系</h2><div class="section-line"></div></div>
+            <div class="contact-container">
+                <div class="contact-info reveal">
+                    <h3>让我们聊聊 💬</h3>
+                    <p>如果你有任何项目想法或只是想打个招呼，随时可以给我发消息。</p>
+                    <div class="contact-methods">
+                        <div class="contact-method"><div class="contact-icon"><i class="fas fa-envelope"></i></div><span>example@email.com</span></div>
+                        <div class="contact-method"><div class="contact-icon"><i class="fas fa-location-dot"></i></div><span>香港</span></div>
+                        <div class="contact-method"><div class="contact-icon"><i class="fab fa-github"></i></div><span>github.com/yourusername</span></div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">邮箱</label>
-                        <input type="email" id="email" name="email" required>
+                </div>
+                <div class="contact-form-wrapper reveal delay-2">
+                    <div id="formSuccess" class="form-success" style="display:none">
+                        <div class="success-icon"><i class="fas fa-check"></i></div>
+                        <h3>消息已发送！</h3>
+                        <p>感谢你的留言，我会尽快回复你 😊</p>
                     </div>
-                    <div class="form-group">
-                        <label for="message">留言</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">提交</button>
-                </form>
+                    <form id="contactForm">
+                        <div class="form-group"><label for="name"><i class="fas fa-user"></i> 您的姓名</label><input type="text" id="name" name="name" placeholder="请输入您的姓名" required></div>
+                        <div class="form-group"><label for="email"><i class="fas fa-envelope"></i> 您的邮箱</label><input type="email" id="email" name="email" placeholder="请输入您的邮箱" required></div>
+                        <div class="form-group"><label for="message"><i class="fas fa-comment"></i> 留言内容</label><textarea id="message" name="message" rows="5" placeholder="请输入您的留言" required></textarea></div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBtn"><i class="fas fa-paper-plane"></i> 发送消息</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- 底部 -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 余建科. 保留所有权利.</p>
+            <div class="footer-content">
+                <p class="footer-brand">余建科</p>
+                <p class="footer-copy">&copy; 2026 余建科. 保留所有权利.</p>
+                <div class="footer-links"><a href="#home">首页</a><a href="#about">关于</a><a href="#projects">作品</a><a href="#contact">联系</a></div>
+            </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
